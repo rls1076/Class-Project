@@ -3,4 +3,6 @@ mkdir plots/
 mkdir results/
 mkdir -p data/fastqs
 
+made changes
+
 
