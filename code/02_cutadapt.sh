@@ -1,9 +1,9 @@
 #!/bin/bash
 
 ### THIS IS WHERE PROJECTS BEGIN TO DIVERGE. The cutadapt parameters and primers will depend on the project. See qiime2_parameters.sh for cutadapt parameters and 01_trim.sh for polyG filter parameters.
-primer="RBCL"
+primer="18s"
 projname="DEP_${primer}"
-## example: projname="Cyanobac_16s_V4-V5"
+## example: projname="Estuaries-18s"
 
 conda activate qiime2-amplicon-2026.1
 
@@ -16,9 +16,13 @@ qiime tools import \
 
 
 ## copied from qiime2_parameters.sh
-fw='^GTGYCAGCMGCCGCGGTAA'	
-rv='^CCGYCAATTYMTTTRAGTTT'
-cutadapt_config="--p-front-f $fw --p-front-r $rv"
+overlap=10
+    fw='GTACACACCGCCCGTC'
+    rv='TGATCCTTCTGCAGGTTCACCTAC'
+
+    cutadapt_config="--p-front-f $fw --p-front-r $rv"
+
+    echo $cutadapt_config
 
 ### See qiime2_parameters.sh for cutadapt parameters and 01_trim.sh for polyG filter parameters.
 qiime cutadapt trim-paired \
