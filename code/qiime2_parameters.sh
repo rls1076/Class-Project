@@ -29,6 +29,9 @@
     trimleftf=0
     trimleftr=0
 
+    ## threads
+    threads=10
+
     ## Classify
     reftax=${reftax:-/home/users/jtm1171/refdbs/18s/SILVA/silva-138-99-tax.qza}
     refreads=${refreads:-/home/users/jtm1171/refdbs/18s/SILVA/silva-138-99-seqs-pid_0.65-extracted.qza}

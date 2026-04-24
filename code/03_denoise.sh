@@ -15,6 +15,8 @@ trimleftr=0
 
 echo "begin denoise..."
 
+screen
+
 qiime dada2 denoise-paired \
     --i-demultiplexed-seqs data/results/${projname}_demux_cutadapt.qza  \
     --p-trunc-len-f ${trunclenf} \
