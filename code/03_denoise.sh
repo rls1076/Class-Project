@@ -2,6 +2,8 @@
 
 screen
 
+conda activate qiime2-amplicon-2026.1
+
 primer="18s"
 projname="Estuaries_${primer}"
 ## Number of bp overlapping between forward and reverse reads required for merging in DADA2. Default is 12, but I have found that this can be relaxed to 10 for 16s V4-V5 amplicons without a significant loss of quality. This allows more reads to be retained after denoising. See
@@ -33,5 +35,5 @@ qiime dada2 denoise-paired \
     --o-denoising-stats data/results/${projname}_dns \
     --o-table data/results/${projname}_table \
     --o-representative-sequences data/results/${projname}_rep-seqs \
-
+    --output-dir data/results/${projname}_dada2
     
