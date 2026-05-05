@@ -1,5 +1,7 @@
 #!/bin/bash
 
+screen
+
 primer="18s"
 projname="Estuaries_${primer}"
 ## Number of bp overlapping between forward and reverse reads required for merging in DADA2. Default is 12, but I have found that this can be relaxed to 10 for 16s V4-V5 amplicons without a significant loss of quality. This allows more reads to be retained after denoising. See
@@ -13,9 +15,10 @@ trunclenr=85
 trimleftf=0
 trimleftr=0
 
-echo "begin denoise..."
+## threads
+threads=12
 
-screen
+echo "begin denoise..."
 
 qiime dada2 denoise-paired \
     --i-demultiplexed-seqs data/results/${projname}_demux_cutadapt.qza  \
