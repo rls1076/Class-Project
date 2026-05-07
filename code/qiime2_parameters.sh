@@ -30,7 +30,7 @@
     trimleftr=0
 
     ## threads
-    threads=10
+    threads=12
 
     ## Classify
     reftax=${reftax:-/home/users/jtm1171/refdbs/18s/SILVA/silva-138-99-tax.qza}
