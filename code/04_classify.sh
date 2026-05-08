@@ -13,6 +13,7 @@ maxaccepts=10
 query_cov=0.8 
 perc_identity=0.90 
 weak_id=0.80
+threads=12
 
 qiime feature-classifier classify-hybrid-vsearch-sklearn \
   --i-query data/results/${projname}_rep-seqs.qza \
