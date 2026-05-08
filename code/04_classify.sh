@@ -1,5 +1,9 @@
 #!/bin/bash
 
+screen
+
+conda activate qiime2-amplicon-2026.1
+
 primer="18s"
 projname="Estuaries_${primer}"
 
