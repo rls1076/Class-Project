@@ -25,7 +25,7 @@ qiime feature-table filter-features \
 qiime taxa barplot \
   --i-table data/results/${projname}_filtered-table.qza \
   --i-taxonomy data/results/${projname}_hybrid_taxonomy.qza \
-  --m-metadata-file metadata/metadata-update.tsv \
+  --m-metadata-file data/metadata-update.tsv \
   --o-visualization plots/${projname}_taxa_barplot.qzv
 
 ## Make a phylogenetic tree and run core metrics to get the alpha and beta diversity metrics for each sample. This will be used in the next script to create a PCoA plot of the beta diversity metrics.
