@@ -8,7 +8,7 @@ conda activate qiime2-amplicon-2026.1
 qiime taxa barplot \
   --i-table data/results/${projname}_table.qza \
   --i-taxonomy data/results/${projname}_hybrid_taxonomy.qza \
-  --m-metadata-file metadata/metadata-update.tsv \
+  --m-metadata-file data/metadata-update.tsv \
   --o-visualization data/results/${projname}_taxa_barplot.qzv
 
 ## To view the interactive barplot, you can use the qiime2 view command or upload the .qzv file to https://view.qiime2.org/ to interactively explore the plot. You can also export the plot as a .png file. Screenshots of the barplots work as well
@@ -23,7 +23,7 @@ qiime feature-table filter-features \
   --o-filtered-table data/results/${projname}_taxonomy-matched-table.qza
   
 qiime taxa barplot \
-  --i-table data/results/${projname}_filtered-table.qza \
+  --i-table data/results/${projname}_table.qza \
   --i-taxonomy data/results/${projname}_hybrid_taxonomy.qza \
   --m-metadata-file data/metadata-update.tsv \
   --o-visualization plots/${projname}_taxa_barplot.qzv
