@@ -19,6 +19,25 @@ perc_identity=0.90
 weak_id=0.80
 threads=12
 
+Option 1:
+
+qiime feature-classifier classify-hybrid-vsearch-sklearn \
+  --i-query data/results/${projname}_rep-seqs.qza \
+  --o-classifier silva-138-99_2022.8_nb-classifier.qza \
+  --i-reference-reads /tmp/GEN711-811_data/refdbs/silva-138-99-seqs-extract-reads.qza \
+  --i-reference-taxonomy /tmp/GEN711-811_data/refdbs/silva-138-99-tax.qza \
+  --p-threads ${threads} \
+  --p-query-cov ${query_cov} \
+  --p-perc-identity ${perc_identity} \
+  --p-maxrejects all \
+  --p-maxaccepts ${maxaccepts} \
+  --p-maxhits all \
+  --p-min-consensus 0.51 \
+  --p-confidence 0.7 \
+  --o-classification data/results/${projname}_hybrid_taxonomy
+
+Option 2-original:
+
 qiime feature-classifier classify-hybrid-vsearch-sklearn \
   --i-query data/results/${projname}_rep-seqs.qza \
   --i-classifier ${sklearn} \
