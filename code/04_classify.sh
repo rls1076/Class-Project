@@ -21,9 +21,14 @@ threads=12
 
 Option 1:
 
+qiime feature-classifier fit-classifier-naive-bayes \
+  --i-reference-reads /tmp/GEN711-811_data/refdbs/silva-138-99-seqs-extract-reads.qza \
+  --i-reference-taxonomy /tmp/GEN711-811_data/refdbs/silva-138-99-tax.qza \
+  --o-classifier silva-138-99_2022.8_nb-classifier.qza
+
 qiime feature-classifier classify-hybrid-vsearch-sklearn \
   --i-query data/results/${projname}_rep-seqs.qza \
-  --o-classifier silva-138-99_2022.8_nb-classifier.qza \
+  --i-classifier silva-138-99_2022.8_nb-classifier.qza \
   --i-reference-reads /tmp/GEN711-811_data/refdbs/silva-138-99-seqs-extract-reads.qza \
   --i-reference-taxonomy /tmp/GEN711-811_data/refdbs/silva-138-99-tax.qza \
   --p-threads ${threads} \
