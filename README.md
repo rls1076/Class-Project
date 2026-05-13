@@ -16,3 +16,4 @@ I was interested in the metabarcoding data collected by ____ to gain insight int
 
 ## Findings
 
+![barplot](plots/barplot.png)
