@@ -44,8 +44,8 @@ qiime phylogeny align-to-tree-mafft-fasttree \
 ### Core Metrics (this will generate the alpha and beta diversity metrics for each sample, which will be used in the next script to create a PCoA plot of the beta diversity metrics)
 ### Choose one diversity ordination to vizualize in the readme of your github. Justify why you chose that one. You can also make multiple ordination plots if you want to compare the different beta diversity metrics.
 qiime diversity core-metrics-phylogenetic \
-    --i-phylogeny data/results/${projname}_rooted-tree.qza \
-    --i-table data/results/${projname}_samp_filtered-table.qza \
+    --i-phylogeny plots/${projname}_rooted-tree.qza \
+    --i-table data/results/${projname}_tax_matched_table.qza \
     --p-with-replacement \
     --p-sampling-depth 500 \
     --m-metadata-file data/metadata-update.tsv \
