@@ -48,7 +48,7 @@ qiime diversity core-metrics-phylogenetic \
     --i-table data/results/${projname}_samp_filtered-table.qza \
     --p-with-replacement \
     --p-sampling-depth 500 \
-    --m-metadata-file metadata/${projname}_metadata.tsv \
+    --m-metadata-file data/metadata-update.tsv \
     --output-dir data/results/${projname}_core-metrics-data/
 
 ## If you need to re-run the diversity core-metrics-phylogenetic command, you will need to delete the data/results/${projname}_core-metrics-data/ directory before re-running the command, otherwise you will get an error about the directory already existing. You can do this with the following command:    
