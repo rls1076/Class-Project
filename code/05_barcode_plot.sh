@@ -1,6 +1,11 @@
 #!/bin/bash
 
 ## replace with the qiime2 environment youve been using 
+screen
+
+primer="18s"
+projname="Estuaries_${primer}"
+
 conda activate qiime2-amplicon-2026.1
 
 ### This script will create a barcode plot of the taxonomic composition of each sample. It will use the qiime2 feature-table and taxonomy files to create a stacked bar plot of the relative abundance of each taxon in each sample. The plot will be saved as a .png file in the data/results directory.
@@ -14,16 +19,15 @@ qiime taxa barplot \
 ## To view the interactive barplot, you can use the qiime2 view command or upload the .qzv file to https://view.qiime2.org/ to interactively explore the plot. You can also export the plot as a .png file. Screenshots of the barplots work as well
 ## To download the .qzv file, right click on the file in vscode to download it to your local computer, then you can upload it to the qiime2 view website.
 
-
 ## If you get an error form the barplotabout missing IDs, try this:
 
-qiime feature-table filter-features \
-  --i-table data/results/${projname}_table.qza \
+qiime feature-table filter-samples \
+  --i-table data/results/${projname}_taxonomy-matched-table.qza \
   --m-metadata-file data/results/${projname}_hybrid_taxonomy.qza \
-  --o-filtered-table data/results/${projname}_taxonomy-matched-table.qza
+  --o-filtered-table data/results/${projname}_tax_matched_table.qza
   
 qiime taxa barplot \
-  --i-table data/results/${projname}_table.qza \
+  --i-table data/results/${projname}_tax_matched_table.qza \
   --i-taxonomy data/results/${projname}_hybrid_taxonomy.qza \
   --m-metadata-file data/metadata-update.tsv \
   --o-visualization plots/${projname}_taxa_barplot.qzv
