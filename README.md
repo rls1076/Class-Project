@@ -19,4 +19,5 @@ I was interested in the metabarcoding data collected by the National Estuarine R
 ![barplot](plots/Estuaries-speciesbysalinity.png)
 Figure 1. Barplot showing taxonomic distribution in Apalachicola Bay, Hawaii, and Great Bay corresponding to different salinity values. Enterobacteriaceae are depicted by green bars and are most numerous at 0.1-0.7 salinity, with a relative frequency of up to 76.33%. Bacillariophyceae and Dinophyceae, depicted by purple and orange bars respectively, were most frequently found at 13.4-35 salinity. 
 
-
+![pcoa](plots/PcoA%20fish%20estuaries.png)
+Figure 2.
