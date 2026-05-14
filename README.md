@@ -19,5 +19,5 @@ I was interested in the metabarcoding data collected by the National Estuarine R
 ![barplot](plots/Estuaries-speciesbysalinity.png)
 Figure 1. Barplot showing taxonomic distribution in Apalachicola Bay, Hawaii, and Great Bay corresponding to different salinity values. Enterobacteriaceae are depicted by green bars and are most numerous at 0.1-0.7 salinity, with a relative frequency of up to 76.33%. This corresponds to the higher abundance of Enterobacteriaceae typically seen in low salinity environments, like coastal or freshwater. Bacillariophyceae and Dinophyceae, depicted by purple and orange bars respectively, were most frequently found at 13.4-35 salinity. In this salinity range, the relative frequency of Bacillariophyceae reaches up to 29.29% and Dinophyceae up to 46.98%. This can be obsered with particular groups within Bacillariophyceae and Dinophyceae, like diatoms or dinoplagelletes, that are adapted to high osmotic pressure and thrive in high salinity environments.  
 
-
+![PcoA](plots/Estuaries%20PCoA-cropped.png)
 Figure 2. Principle coordinate analysis showing beta diversity patterns. The species found in 0.1-0.7 salinity are depicted in green, 8.6-13.4 in purple, 24.7-26.3 in light pink, and 31.6-35 in red. The lower salinity species show greater variation attributable to the salinity, with salinity and variation trending inversely.      
